@@ -94,7 +94,7 @@ pipeline {
                        catchError (buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
                        
                         script {
-                            withEnv(["SONAR_SCANNER_OPTS=-Xms1024m -Xmx2048m","JAVA_HOME=${tool versionJDK}"]) {
+                            withEnv(["SONAR_SCANNER_OPTS=-Xms512m -Xmx1024m","JAVA_HOME=${tool versionJDK}"]) {
                                 scannerHome = tool sonarScannerTool
 
                                 try {
@@ -113,9 +113,9 @@ pipeline {
                     }
                
                 
-                }
-                }
-                }
+                }  
+                
+                
 
                 stage('Umbral de Calidad') {
 
