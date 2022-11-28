@@ -29,8 +29,7 @@ pipeline {
         stage('Inicialización')
         {
             steps{
-               
-                info()
+
                 cleanWs()
                 script {
                     urlGIT=env.gitlabSourceRepoHttpUrl
