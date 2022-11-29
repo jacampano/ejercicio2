@@ -14,7 +14,7 @@ def instalacionSonar = "SonarLocal"
 
 //Condiciones ejecución fases --
 def realizarCompilacion = true
-def analizarConSonar = false
+def analizarConSonar = true
 def analizarConOWASP = true
 def realizarPruebasUnitarias = false
 
